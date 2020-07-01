@@ -1,3 +1,5 @@
+import 'Person.dart';
+import 'Boy.dart';
 main(){
   print('hello dart');
 
@@ -101,7 +103,28 @@ main(){
  fb();//125
  fb();//126
 
+
+//类
+Person pclass = new Person("1",22);
+ pclass.name;
+ pclass.age;
+ pclass.printMyself();
+ Person.staticMethod();
+
+//级联操作
+ pclass..name="張三"
+       ..age=100
+       ..printMyself();
+
+//继承
+       Boy boy = new Boy("12",33,"男性");
+       boy..name="男孩"
+          ..age=5
+          ..printMyself();
+
+
 }
+
 
 String printUserInfo(String name,[int age,String sex="男"]){
   if(age == null){
